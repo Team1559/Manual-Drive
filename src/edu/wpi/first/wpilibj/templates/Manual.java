@@ -1,6 +1,6 @@
 /*=======================================================
 
- This code assumes thta the drive system uses talons, but can
+ This code assumes that the drive system uses talons, but can
  be easily modified for jaguars, victors, whatever. 
 
  =======================================================*/
@@ -19,9 +19,9 @@ public class Manual extends IterativeRobot {
 
     //!\\ Should be moved into Wiring class!
     public final int LEFT1 = 2;
-    public final int LEFT2 = 1;
+//    public final int LEFT2 = 1;
     public final int RIGHT1 = 3;
-    public final int RIGHT2 = 4;
+//    public final int RIGHT2 = 4;
 
     //variables
     int gear;
