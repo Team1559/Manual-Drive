@@ -1,6 +1,6 @@
 MIDlet-Name: 2 speed Automatic Drive
 MIDlet-Version: 1.0.0
 MIDlet-Vendor: FIRST
-MIDlet-1: Auto, , edu.wpi.first.wpilibj.templates.Auto
+MIDlet-1: Manual, , edu.wpi.first.wpilibj.templates.Manual
 MicroEdition-Profile: IMP-1.0
 MicroEdition-Configuration: CLDC-1.1
