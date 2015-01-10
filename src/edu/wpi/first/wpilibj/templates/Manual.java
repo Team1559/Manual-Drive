@@ -18,9 +18,9 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class Manual extends IterativeRobot {
 
     //!\\ Should be moved into Wiring class!
-    public final int LEFT1 = 2;
+    public final int LEFT1 = 1;
 //    public final int LEFT2 = 1;
-    public final int RIGHT1 = 3;
+    public final int RIGHT1 = 10;
 //    public final int RIGHT2 = 4;
 
     //variables
@@ -67,11 +67,17 @@ public class Manual extends IterativeRobot {
         ratio1 = 1.05;
         ratio2 = 1.99;
         maxRPM = 3000;
-        rd = new RobotDrive(l1, r1);
+        rd = new RobotDrive(r1, l1);
+        rd.setInvertedMotor(RobotDrive.MotorType.kFrontLeft, false);
+        rd.setInvertedMotor(RobotDrive.MotorType.kFrontRight, false);
         shift1 = new Solenoid(1);
         shift2 = new Solenoid(2);
     }
 
+    public void disabledInit(){
+        
+    }
+    
     public void disabled() {
 
 //        comp.stop();
@@ -103,6 +109,9 @@ public class Manual extends IterativeRobot {
         if (joy.getRawButton(5)){
             gear2();
         }
+        
+//        System.out.println("RIGHT: " + r1.getSpeed());
+//        System.out.println("LEFT" + l1.getSpeed());
     }
 
     public void testInit() {
@@ -119,14 +128,14 @@ public class Manual extends IterativeRobot {
     }
 
     public void gear1() {
-        shift1.set(true);
-        shift2.set(false);
+        shift1.set(false);
+        shift2.set(true);
         System.out.println("GEAR 1");
     }
 
     public void gear2() {
-        shift1.set(false);
-        shift2.set(true);
+        shift1.set(true);
+        shift2.set(false);
         System.out.println("GEAR 2");
     }
 
