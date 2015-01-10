@@ -18,9 +18,9 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class Manual extends IterativeRobot {
 
     //!\\ Should be moved into Wiring class!
-    public final int LEFT1 = 1;
+    public final int LEFT1 = 10; //maybe this will work (?)
 //    public final int LEFT2 = 1;
-    public final int RIGHT1 = 10;
+    public final int RIGHT1 = 1; //see above
 //    public final int RIGHT2 = 4;
 
     //variables
@@ -67,9 +67,9 @@ public class Manual extends IterativeRobot {
         ratio1 = 1.05;
         ratio2 = 1.99;
         maxRPM = 3000;
-        rd = new RobotDrive(r1, l1);
-        rd.setInvertedMotor(RobotDrive.MotorType.kFrontLeft, false);
-        rd.setInvertedMotor(RobotDrive.MotorType.kFrontRight, false);
+        rd = new RobotDrive(l1, r1);
+//        rd.setInvertedMotor(RobotDrive.MotorType.kFrontLeft, false);
+//        rd.setInvertedMotor(RobotDrive.MotorType.kFrontRight, false);
         shift1 = new Solenoid(1);
         shift2 = new Solenoid(2);
     }
